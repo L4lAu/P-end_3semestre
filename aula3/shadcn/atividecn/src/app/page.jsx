@@ -22,6 +22,8 @@ export default function Home() {
             <NavigationMenuTrigger>Item One</NavigationMenuTrigger>
 
             <NavigationMenuContent>
+
+              <div className="grid ">
               <NavigationMenuLink href="/dashboard">
                 <ul>
                   <li>
@@ -43,6 +45,9 @@ export default function Home() {
                   </li>
                 </ul>
               </NavigationMenuLink>
+              </div>
+
+              
             </NavigationMenuContent>
           </NavigationMenuItem>
 
