@@ -1,0 +1,16 @@
+Descrição
+O componente exibe uma lista de cursos.
+Cada card contém informações sobre cada serviço.
+
+funcionais:
+
+1- Exibe cards interativos que o cliente pode selecionar para se redirecionar a outras paginas.
+2- O cliente deve clicar em "acessar" para encontrar o curso desejado.
+3- O cliente consegue comprar acesso à cursos.
+
+
+não funcionais
+
+1- carregamento rapido de paginas.
+2- processamento de dados.
+3- interação com animações e etc. 
