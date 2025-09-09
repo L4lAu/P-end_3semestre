@@ -11,6 +11,16 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuIndicator,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavigationMenuViewport,
+} from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { useSidebar } from "@/components/ui/sidebar"
@@ -26,20 +36,67 @@ export function SiteHeader() {
           <SidebarIcon />
         </Button>
         <Separator orientation="vertical" className="mr-2 h-4" />
-        <Breadcrumb className="hidden sm:block">
-          <BreadcrumbList>
-            <BreadcrumbItem>
-              <BreadcrumbLink href="/">
-                Building Your Application
-              </BreadcrumbLink>
-            </BreadcrumbItem>
-            <BreadcrumbSeparator />
-            <BreadcrumbItem>
-              <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-            </BreadcrumbItem>
-          </BreadcrumbList>
-        </Breadcrumb>
+
+
+        {/* NAVIGATION MENU */}
+        <NavigationMenu viewport={false}>
+          <NavigationMenuList className={"gap-7"}>
+
+
+
+            <NavigationMenuItem>
+                <NavigationMenuTrigger>QUALQURER</NavigationMenuTrigger>
+              <NavigationMenuContent>
+
+                {/* ITENS MENU */}
+
+                <div className="w-45 lg:w-85  gap-2">
+                  <NavigationMenuLink href="#">
+                    <Button>item 1</Button>
+                  </NavigationMenuLink>
+                </div>
+
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>QUALQURER</NavigationMenuTrigger>
+              <NavigationMenuContent>
+
+                {/* ITENS MENU */}
+
+                <div className=" w-45 lg:w-85 gap-2">
+                  <NavigationMenuLink href="#">
+                    <Button>item 1</Button>
+                  </NavigationMenuLink>
+                </div>
+
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>QUALQURER</NavigationMenuTrigger>
+              <NavigationMenuContent>
+
+                {/* ITENS MENU */}
+
+                <div className=" w-45 lg:w-85 gap-2 ">
+                  <NavigationMenuLink href="#">
+                    <Button>item 1</Button>
+                  </NavigationMenuLink>
+                </div>
+
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+
+
+          </NavigationMenuList>
+        </NavigationMenu>
         <SearchForm className="w-full sm:ml-auto sm:w-auto" />
+
       </div>
     </header>
   );
