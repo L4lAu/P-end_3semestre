@@ -45,7 +45,7 @@ export function SiteHeader() {
 
 
             <NavigationMenuItem>
-                <NavigationMenuTrigger>QUALQURER</NavigationMenuTrigger>
+                <NavigationMenuTrigger>QUALQUER</NavigationMenuTrigger>
               <NavigationMenuContent>
 
                 {/* ITENS MENU */}
@@ -62,7 +62,7 @@ export function SiteHeader() {
 
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>QUALQURER</NavigationMenuTrigger>
+              <NavigationMenuTrigger>QUALQUER</NavigationMenuTrigger>
               <NavigationMenuContent>
 
                 {/* ITENS MENU */}
@@ -78,7 +78,7 @@ export function SiteHeader() {
 
 
             <NavigationMenuItem>
-              <NavigationMenuTrigger>QUALQURER</NavigationMenuTrigger>
+              <NavigationMenuTrigger>QUALQUER</NavigationMenuTrigger>
               <NavigationMenuContent>
 
                 {/* ITENS MENU */}
