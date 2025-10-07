@@ -6,57 +6,56 @@ import React from "react";
 const testimonials = [
   {
     id: 1,
-    name: "John Doe",
-    designation: "Software Engineer",
+    name: "João Silva",
+    designation: "Desenvolvedor de Software",
     company: "TechCorp",
     testimonial:
-      "This product has completely transformed the way we work. The efficiency and ease of use are unmatched!",
+      "Os cursos superaram todas as minhas expectativas. Foi uma das melhores experiências de aprendizado que já tive!",
     avatar: "https://randomuser.me/api/portraits/men/1.jpg",
   },
   {
     id: 2,
-    name: "Sophia Lee",
-    designation: "Data Analyst",
+    name: "Sofia Lima",
+    designation: "Analista de Dados",
     company: "InsightTech",
     testimonial:
-      "This tool has saved me hours of work! The analytics and reporting features are incredibly powerful.",
+      "Aprendi muito em pouco tempo. A didática é excelente e os conteúdos são realmente aplicáveis no dia a dia.",
     avatar: "https://randomuser.me/api/portraits/women/6.jpg",
   },
   {
     id: 3,
-    name: "Michael Johnson",
-    designation: "UX Designer",
+    name: "Miguel Oliveira",
+    designation: "Designer UX",
     company: "DesignPro",
     testimonial:
-      "An amazing tool that simplifies complex tasks. Highly recommended for professionals in the industry. " +
-      "The intuitive interface makes it easy to onboard new team members, and the automation features save us countless hours every week. ",
+      "Foi uma das experiências mais enriquecedoras da minha carreira. Os cursos são claros, objetivos e muito bem estruturados.",
     avatar: "https://randomuser.me/api/portraits/men/3.jpg",
   },
   {
     id: 4,
-    name: "Emily Davis",
-    designation: "Marketing Specialist",
+    name: "Emily Souza",
+    designation: "Especialista em Marketing",
     company: "BrandBoost",
     testimonial:
-      "I've seen a significant improvement in our team's productivity since we started using this service.",
+      "Simplesmente incrível! Os cursos me ajudaram a evoluir muito profissionalmente. Recomendo de olhos fechados.",
     avatar: "https://randomuser.me/api/portraits/women/4.jpg",
   },
   {
     id: 5,
-    name: "Daniel Martinez",
-    designation: "Full-Stack Developer",
+    name: "Daniel Martins",
+    designation: "Desenvolvedor Full-Stack",
     company: "CodeCrafters",
     testimonial:
-      "The best investment we've made! The support team is also super responsive and helpful.",
+      "Conteúdo de altíssimo nível. Sem dúvidas, uma das melhores decisões que tomei foi fazer esses cursos.",
     avatar: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
     id: 6,
-    name: "Jane Smith",
+    name: "Juliana Castro",
     designation: "Product Manager",
     company: "InnovateX",
     testimonial:
-      "The user experience is top-notch! The interface is clean, intuitive, and easy to navigate.",
+      "Nunca aprendi tanto em tão pouco tempo. A qualidade do material e a didática dos instrutores são impressionantes.",
     avatar: "https://randomuser.me/api/portraits/women/2.jpg",
   },
 ];

@@ -4,8 +4,7 @@ import {
   SidebarInset,
   SidebarProvider,
 } from "@/components/ui/sidebar"
-import Cards from "@/components/Card/Cards"
-import { Card } from "@/components/Card/Cards.jsx"
+import Contact02Page from "@/components/contact-02/contact-02"
 import Footer05Page from "@/components/footer-05/footer-05"
 
 
@@ -21,9 +20,7 @@ export default function Page() {
         <div className="flex flex-1">
           <AppSidebar />
           <SidebarInset>
-          <Cards>
-
-          </Cards>
+          <Contact02Page/>
       <Footer05Page/>
       
           </SidebarInset>
