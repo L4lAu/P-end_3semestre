@@ -1,5 +1,5 @@
 "use client"
-import CardItems from "@/components/Cards";
+import { CardItems } from "@/components/Cards";
 import { ModalAddItem } from "@/components/ModalAddItem";
 import { useItems } from "@/hooks/useItems";
 
@@ -8,12 +8,16 @@ export default function Listagem({ itemsInitial }) {
 
     return (
         <>
+            <div className="m-10 grid gap-10">
 
-            {items && items.map((item) => {
-                return <CardItems key={item.id} item={item}/>
-            })}
+                <ModalAddItem onAddItem={(newItem) => { addItem(newItem) }} />
+                <div className="grid grid-cols-4 gap-5">
+                    {items && items.map((item) => {
+                        return <CardItems key={item.id} item={item} />
+                    })}
+                </div>
+            </div>
 
-            <ModalAddItem onAddItem={(newItem) => { addItem(newItem) }} />
         </>
     )
 }

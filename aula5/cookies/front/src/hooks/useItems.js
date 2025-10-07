@@ -24,5 +24,17 @@ export function useItems(itemsInitial) {
         };
     };
 
-    return{items, loading, error, addItem}
+    const delItem = async(itemData) => {
+        setLoading(true);
+        setError(null);
+
+        const excludeItem = api.del("item", itemData);
+
+        if(excludeItem.error){
+            setError("erro ao exluir item");
+        }
+        setItems((prevItems) => (item => item.id !== itemData.id));
+    }
+
+    return{items, loading, error, addItem, delItem}
 };
