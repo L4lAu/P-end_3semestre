@@ -24,9 +24,9 @@ export function CardItems({ item }) {
                 </ItemContent>
                 <ItemActions className={"grid"}>
                     <Button variant="outline" size="sm">
-                        <ModalDelItem onDelItem={(item) => { delItem(item) }} item={item} />
+                        <ModalDelItem onDelItem={delItem(item)} item={item} />
                     </Button>
-                    <p>{item.id}</p>
+                    {item.id}
                 </ItemActions>
             </Item>
 

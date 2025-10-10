@@ -24,16 +24,24 @@ export function useItems(itemsInitial) {
         };
     };
 
-    const delItem = async(itemData) => {
+    const delItem = async (id) => {
         setLoading(true);
         setError(null);
 
-        const excludeItem = api.del("item", itemData);
+        try{
+            const deleteItem = api.del(`item/${id}`);
 
-        if(excludeItem.error){
-            setError("erro ao exluir item");
+            if(deleteItem.error) {
+                 setError("erro ao exluir item");
+                 return;
+            }
+
+            setItems((prevItems) => prevItems.filter((item) => item.id !== id));
+        } catch (error){
+            setError("erro ao deletar: ", error);
+        } finally {
+            setLoading(false);
         }
-        setItems((prevItems) => (item => item.id !== itemData.id));
     }
 
     return{items, loading, error, addItem, delItem}
