@@ -14,9 +14,7 @@ import {
 import { Title } from "@radix-ui/react-dialog"
 import { useState } from "react"
 
-export function ModalDelItem({ onDelItem, item }) {
-    const [titulo, setTitulo] = useState('')
-    const [status, setStatus] = useState('')
+export function ModalDelItem({ onDel, item }) {
 
     return (
         <Dialog>
@@ -45,9 +43,8 @@ export function ModalDelItem({ onDelItem, item }) {
                         <DialogClose asChild>
                             <Button variant="outline">Cancel</Button>
                         </DialogClose>
-                        <Button type="submit" onClick={(e) => {
-                            e.preventDefault()
-                            onDelItem(item)
+                        <Button onClick={() => {
+                            onDel()
                         }}>confirmar deletar</Button>
                     </DialogFooter>
                 </DialogContent>

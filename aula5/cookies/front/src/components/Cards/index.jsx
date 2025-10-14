@@ -10,8 +10,7 @@ import {
 
 import { useItems } from "@/hooks/useItems";
 
-export function CardItems({ item }) {
-    const { delItem } = useItems()
+export function CardItems({ item, onDelItem, onEditItem }) {
 
     return (
         <div className="flex w-full max-w-md flex-col gap-6">
@@ -23,9 +22,7 @@ export function CardItems({ item }) {
                     </ItemDescription>
                 </ItemContent>
                 <ItemActions className={"grid"}>
-                    <Button variant="outline" size="sm">
-                        <ModalDelItem onDelItem={delItem(item)} item={item} />
-                    </Button>
+                    <ModalDelItem onDel={()=> onDelItem(item.id)} onEdit={()=> onEditItem(item.id, item.titulo, item.status)} item={item} />
                     {item.id}
                 </ItemActions>
             </Item>
