@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/item"
 
 import { useItems } from "@/hooks/useItems";
+import { DropdownPut } from "../ModalEditItem";
 
 export function CardItems({ item, onDelItem, onEditItem }) {
 
@@ -22,7 +23,8 @@ export function CardItems({ item, onDelItem, onEditItem }) {
                     </ItemDescription>
                 </ItemContent>
                 <ItemActions className={"grid"}>
-                    <ModalDelItem onDel={()=> onDelItem(item.id)} onEdit={()=> onEditItem(item.id, item.titulo, item.status)} item={item} />
+                    <ModalDelItem onDel={()=> onDelItem(item.id)} item={item} />
+                    <DropdownPut onEdit={() => onEditItem(item.id)} item={item}/>
                     {item.id}
                 </ItemActions>
             </Item>
