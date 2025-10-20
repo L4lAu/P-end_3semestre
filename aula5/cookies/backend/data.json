@@ -7,51 +7,21 @@
   {
     "id": "2",
     "titulo": "Consulta médica",
-    "status": "concluído"
+    "status": "Pendente"
   },
   {
     "id": "3",
     "titulo": "Comprar ingressos para o cinema",
-    "status": "pendente"
+    "status": "Concluído"
   },
   {
     "id": "1759758985325",
     "titulo": "wedawd",
-    "status": "asdaw"
+    "status": "Pendente"
   },
   {
     "id": "1759759017338",
-    "titulo": "asdw",
-    "status": "adw"
-  },
-  {
-    "id": "1759759018320",
-    "titulo": "asdw",
-    "status": "adw"
-  },
-  {
-    "id": "1759759018538",
-    "titulo": "asdw",
-    "status": "adw"
-  },
-  {
-    "id": "1759759018696",
-    "titulo": "asdw",
-    "status": "adw"
-  },
-  {
-    "id": "1759759018841",
-    "titulo": "asdw",
-    "status": "adw"
-  },
-  {
-    "id": "1759759181102",
-    "titulo": "czsczs",
-    "status": "fwawfwa"
-  },
-  {
-    "id": "1759759181474",
-    "titulo": "czsczs",
-    "status": "fwawfwa"
+    "titulo": "lalau",
+    "status": "Ativo"
   }
 ]

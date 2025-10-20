@@ -71,7 +71,7 @@ export function LoginForm({ className, ...props }) {
             <FieldGroup>
               <Field>
                 <FieldLabel htmlFor="username">Username</FieldLabel>
-                <Input id="username" type="username" placeholder="ramonespier" required
+                <Input id="username" type="username" placeholder="username" required
                   value={username}
                   onChange={(e) => { setUsername(e.target.value) }} />
               </Field>
