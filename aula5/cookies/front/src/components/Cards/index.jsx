@@ -22,9 +22,11 @@ export function CardItems({ item, onDelItem, onEditItem }) {
                         {item.status}
                     </ItemDescription>
                 </ItemContent>
-                <ItemActions className={"grid"}>
-                    <ModalDelItem onDel={()=> onDelItem(item.id)} item={item} />
-                    <DropdownPut onEdit={() => onEditItem(item.id)} item={item}/>
+                <ItemActions className={"grid "}>
+                    <div className="flex gap-1">
+                        <ModalDelItem onDel={() => onDelItem(item.id)} item={item}/>
+                        <DropdownPut onEdit={(id, data) => onEditItem(id, data)} item={item}/>
+                    </div>
                     {item.id}
                 </ItemActions>
             </Item>

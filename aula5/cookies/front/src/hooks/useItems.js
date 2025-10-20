@@ -13,7 +13,7 @@ export function useItems(itemsInitial) {
         setError(null);
 
         try{
-            const createdItem = api.post("items", newItemData);
+            const createdItem = await api.post("items", newItemData);
 
             if(createdItem.error){
                 setError("erro ao criar item");
@@ -44,31 +44,33 @@ export function useItems(itemsInitial) {
         }
     }
 
-    const updateItem = async (id, itemEditado) => {
-        setLoading(true);
-        setError(null);
-        
-        try{
-            const editItem = api.put(`items/${id}`, itemEditado);
+    const editItem = async (id, updatedItem) => {
+        setLoading(true)
+        setError(null)
 
-            if(editItem.error){
-                setError("erro ao editar item");
+        try {
+            const editItem = await api.put(`items/${id}`, updatedItem)
+
+            if (editItem.error) {   
+                setError('ERRO AO EDITAR ITEM' + editItem.error)
                 return;
             }
 
             setItems((prevItems) => prevItems.map((item) => {
-                if(item.id === id) {
-                    return editItem;
-                };
+                if (item.id === id) {
+                    return editItem
+                }
+
                 return item;
-            }));
+            }))
+
+        } catch (error) {
+            setError('ERRO AO EDITAR ITEM')
             
-        }catch (error){
-            setError("erro ao editar: ", error);
-        } finally{
+        } finally {
             setLoading(false)
         }
     }
 
-    return{items, loading, error, addItem, delItem, updateItem}
+    return{items, loading, error, addItem, delItem, editItem}
 };

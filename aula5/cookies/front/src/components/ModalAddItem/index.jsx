@@ -14,6 +14,7 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
+import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrigger, SelectValue } from "../ui/select"
 
 export function ModalAddItem({ onAddItem }) {
     const [titulo, setTitulo] = useState('')
@@ -42,9 +43,19 @@ export function ModalAddItem({ onAddItem }) {
                         </div>
                         <div className="grid gap-3">
                             <Label htmlFor="status">Status</Label>
-                            <Input id="status" name="status"
-                                value={status}
-                                onChange={(e) => { setStatus(e.target.value) }} />
+                            <Select value={status} onValueChange={setStatus}>
+                                <SelectTrigger className="w-full">
+                                    <SelectValue placeholder="Selecione o status" />
+                                </SelectTrigger>
+                                <SelectContent>
+                                    <SelectGroup>
+                                        <SelectLabel>Status</SelectLabel>
+                                        <SelectItem value="Ativo">Ativo</SelectItem>
+                                        <SelectItem value="Pendente">Pendente</SelectItem>
+                                        <SelectItem value="Concluído">Concluído</SelectItem>
+                                    </SelectGroup>
+                                </SelectContent>
+                            </Select>
                         </div>
                     </div>
                     <DialogFooter>

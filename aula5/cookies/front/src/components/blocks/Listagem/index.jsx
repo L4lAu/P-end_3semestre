@@ -4,7 +4,7 @@ import { ModalAddItem } from "@/components/ModalAddItem";
 import { useItems } from "@/hooks/useItems";
 
 export default function Listagem({ itemsInitial }) {
-    const { items, loading, error, addItem, delItem, updateItem} = useItems(itemsInitial);
+    const { items, loading, error, addItem, delItem, editItem} = useItems(itemsInitial);
 
     return (
         <>
@@ -13,7 +13,7 @@ export default function Listagem({ itemsInitial }) {
                 <ModalAddItem onAddItem={(newItem) => { addItem(newItem) }} />
                 <div className="grid grid-cols-4 gap-5">
                     {items && items.map((item) => {
-                        return <CardItems key={item.id} item={item} onDelItem={delItem} onEditItem={updateItem}/>
+                        return <CardItems key={item.id} item={item} onDelItem={delItem} onEditItem={(id, data) => editItem(id, data)} />
                     })}
                 </div>
             </div>
